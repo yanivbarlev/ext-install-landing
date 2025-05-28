@@ -4,45 +4,49 @@
   <meta charset="utf-8">
   <title>Extension Installed ✔</title>
 
-  <!-- Prevent search engines from indexing this page -->
+  <!-- Prevent search engines from indexing this page                        -->
   <meta name="robots" content="noindex">
 
-  <!-- Google tag (gtag.js) – global snippet -->
+  <!-- ─────────── 1. GLOBAL SITE TAG (gtag.js) ─────────── -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1006081641"></script>
   <script>
-    /* ------------- Google Ads setup ------------- */
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    /* Replace only if you ever migrate to a different Ads account */
-    gtag('config', 'AW-1006081641');
 
-    /* ------------- Fire the install conversion ------------- */
-    /* ⬇⬇⬇  INSERT YOUR REAL CONVERSION LABEL IN PLACE OF XXXXX  ⬇⬇⬇ */
+    gtag('js', new Date());                  // required bootstrap
+    gtag('config', 'AW-1006081641');         // your Conversion ID
+  </script>
+
+  <!-- ─────────── 2. EVENT SNIPPET: fires once per page-load ─────────── -->
+  <script>
     gtag('event', 'conversion', {
-      'send_to': 'AW-1006081641/rv3GCLyskc8aEOms3t8D'
-      // optional: , 'value': 0, 'currency': 'USD'
+      'send_to': 'AW-1006081641/rv3GCLyskc8aEOms3t8D',  /* ID / Label pair */
+      'value': 1.0,                                     /* optional */
+      'currency': 'USD'                                 /* optional */
     });
   </script>
 
-  <!-- Minimal styling so the page doesn’t look blank -->
+  <!-- ─────────── Minimal CSS so the page isn’t blank ─────────── -->
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
       text-align: center;
+      background: #fafafa;
     }
-    h1 { font-size: 1.8rem; margin: 0.2em 0; }
-    p  { font-size: 1rem;  color: #555; }
+    h1 { font-size: 1.8rem; margin: 0.25em 0; }
+    p  { font-size: 1rem;  color: #666; max-width: 420px; }
   </style>
 </head>
+
 <body>
   <h1>Thanks for installing!</h1>
-  <p>You can close this tab—Extension&nbsp;Quick&nbsp;Manager is now active.</p>
+  <p>You can close this tab—Extension&nbsp;Quick&nbsp;Manager is now active in Chrome.</p>
 </body>
 </html>
